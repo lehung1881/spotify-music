@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./asset/css/grid.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./asset/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="arrow-page">
+            <i class="arrow-icon arrow-icon--active fa-solid fa-angle-left"></i>
+            <i class="arrow-icon fa-solid fa-angle-right"></i>
+        </div>
+        <ul class="header-right">
+            <li class="header-right__item">
+                <a href="#" class="header-right__link header-right__link-left">
+                    Khám phá Premium
+                </a>
+            </li>
+            <li class="header-right__item header-right__user">
+                <div class="header-right__link">
+                    <i class="user-icon fa-solid fa-user"></i>
+                    Lê Văn Hùng
+                    <i class="down-icon fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="user-list">
+                    <li class="user-item">
+                        <a href="https://open.spotify.com/" class="user-link">
+                            Tài khoản
+                            <i class="user-link__icon fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">Hồ sơ</a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">
+                            Nâng cấp lên Premium
+                            <i class="user-link__icon fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">
+                            Hỗ trợ
+                            <i class="user-link__icon fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">
+                            Tải xuống
+                            <i class="user-link__icon fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">Cài đặt</a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="content-left">
+        <div class="logo">
+            <i class="logo-icon fa-brands fa-spotify"></i>
+            Spotify
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link nav-list__link--active">
+                    <i class="nav-icon fa-solid fa-house"></i>
+                    Trang chủ
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-magnifying-glass"></i>
+                    Tìm kiếm
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#danhsachnghe" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-list"></i>
+                    Danh sách nghe
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-heart"></i>
+                    Bài hát yêu thích
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="row song-body">
+                <div class="col l-2">
+                </div>
+                <div class="col l-10">
+                    <div class="col l-12">
+                        <h1 class="song-heading">Mới nhất</h1>
+                    </div>
+                    <div class="row new-song">
+                        <!-- Render New Song -->
+                    </div>
+                    <div id="danhsachnghe" class="col l-12">
+                        <h1 class="song-heading">Danh sách bài hát</h1>
+                    </div>
+                    <div class="row list-song">
+                        <!-- Render List Song -->
+                    </div>
+                    <div class="col l-12">
+                        <h1 class="song-heading">Bài hát yêu thích</h1>
+                    </div>
+                    <div class="row like-song">
+                        <!-- Render Like Song -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="song-play">
+        <div class="song-play-left">
+            <div class="song-play__img"></div>
+            <div class="song-info">
+                <p class="song-play-name"></p>
+                <p class="song-play-singer"></p>
+                
+            </div>
+            <i class="song-play-icon fa-solid fa-heart"></i>
+        </div>
+        <div class="song-play-center">
+            <div class="control">
+                <div class="control-play control-play-repeat">
+                    <i class="control-play__icon fa-solid fa-repeat "></i>
+                </div>
+                <div class="control-play">
+                    <i class="control-play__icon prev-song fa-solid fa-backward-step"></i>
+                </div>
+                <div class="control-play control-pause-play">
+                    <i class="control-play__icon-1 control-play__icon-pause fa-solid fa-circle-pause"></i>
+                    <i class="control-play__icon-1 control-play__icon-play fa-solid fa-circle-play"></i>
+                </div>
+                <div class="control-play">
+                    <i class="control-play__icon next-song fa-solid fa-forward-step"></i>
+                </div>
+                <div class="control-play">  
+                    <i class="control-play__icon random-song fa-solid fa-shuffle"></i>
+                </div>
+            </div>
+            <div class="control-rang">
+                <input type="range" class="progress" value="0" min="0" max="100" step="1">
+                <audio id="audio" src=""></audio>
+            </div>
+        </div>
+        <div class="song-play-right">
+            <div class="control-play-right">
+                <i class="song-play-right__icon fa-solid fa-microphone-lines-slash"></i>
+            </div>
+            <div class="control-play-right">
+                <i class="song-play-right__icon fa-solid fa-list"></i>
+            </div>
+            <div class="control-play-right control-play-right-volume">
+                <i class="song-play-right__icon fa-solid fa-volume-off volume-off"></i>
+                <i class="song-play-right__icon fa-solid fa-volume-high volume-on"></i>
+            </div>
+            <div class="control-play-right">
+                <input type="range" class="progress-2" min="0" max="100" step="1" value="50">
+            </div>
+        </div>
+    </div>
+    <script src="./asset/main.js"></script>
+    <script src="./asset/user.js"></script>
+</body>
+</html>
