@@ -14,24 +14,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./asset/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./asset/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
-        <div class="arrow-page">
+        <i class="hiden-t logo-icon fa-brands fa-spotify"></i>
+        <div class="arrow-page hiden">
+            
             <i class="arrow-icon arrow-icon--active fa-solid fa-angle-left"></i>
             <i class="arrow-icon fa-solid fa-angle-right"></i>
         </div>
         <ul class="header-right">
-            <li class="header-right__item">
+            <li class="header-right__item hiden">
                 <a href="#" class="header-right__link header-right__link-left">
                     Khám phá Premium
                 </a>
             </li>
             <li class="header-right__item header-right__user">
-                <div class="header-right__link">
+                <div class="hiden header-right__link header-right__link-m">
                     <i class="user-icon fa-solid fa-user"></i>
-                    Lê Văn Hùng
+                    <span>Lê Văn Hùng</span>
                     <i class="down-icon fa-solid fa-angle-down"></i>
                 </div>
                 <ul class="user-list">
@@ -92,7 +95,7 @@
                 </a>
             </li>
             <li class="nav-list__item">
-                <a href="#danhsachnghe" class="nav-list__link">
+                <a href="#" class="nav-list__link">
                     <i class="nav-icon fa-solid fa-list"></i>
                     Danh sách nghe
                 </a>
@@ -105,31 +108,53 @@
             </li>
         </ul>
     </div>
+    <div class="content-left-m">
+        <div class="logo">
+            <i class="logo-icon fa-brands fa-spotify"></i>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link nav-list__link--active">
+                    <i class="nav-icon fa-solid fa-house"></i>
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-list"></i>
+                </a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#" class="nav-list__link">
+                    <i class="nav-icon fa-solid fa-heart"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <div class="container">
         <div class="grid">
-            <div class="row song-body">
-                <div class="col l-2">
+            <div class="song-body">
+                <div class="col l-12">
+                    <h1 class="song-heading">Mới nhất</h1>
                 </div>
-                <div class="col l-10">
-                    <div class="col l-12">
-                        <h1 class="song-heading">Mới nhất</h1>
-                    </div>
-                    <div class="row new-song">
-                        <!-- Render New Song -->
-                    </div>
-                    <div id="danhsachnghe" class="col l-12">
-                        <h1 class="song-heading">Danh sách bài hát</h1>
-                    </div>
-                    <div class="row list-song">
-                        <!-- Render List Song -->
-                    </div>
-                    <div class="col l-12">
-                        <h1 class="song-heading">Bài hát yêu thích</h1>
-                    </div>
-                    <div class="row like-song">
-                        <!-- Render Like Song -->
-                    </div>
-
+                <div class="new-song">
+                    <!-- Render New Song -->
+                </div>
+                <div id="danhsachnghe" class="col l-12">
+                    <h1 class="song-heading">Danh sách bài hát</h1>
+                </div>
+                <div class="list-song">
+                    <!-- Render List Song -->
+                </div>
+                <div class="col l-12">
+                    <h1 class="song-heading">Bài hát yêu thích</h1>
+                </div>
+                <div class="like-song">
+                    <!-- Render Like Song -->
                 </div>
             </div>
         </div>
@@ -140,7 +165,6 @@
             <div class="song-info">
                 <p class="song-play-name"></p>
                 <p class="song-play-singer"></p>
-                
             </div>
             <i class="song-play-icon fa-solid fa-heart"></i>
         </div>
@@ -180,10 +204,13 @@
                 <i class="song-play-right__icon fa-solid fa-volume-high volume-on"></i>
             </div>
             <div class="control-play-right">
-                <input type="range" class="progress-2" min="0" max="100" step="1" value="50">
+                <input type="range" class="progress-2" min="0" max="100" step="1" value="">
             </div>
         </div>
     </div>
+    <footer class="song-footer">
+        <p class="footer-text">Design by <a href="" class="footer-link">@lehung1881</a></p>
+    </footer>
     <script src="./asset/main.js"></script>
     <script src="./asset/user.js"></script>
 </body>

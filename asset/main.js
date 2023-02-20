@@ -97,7 +97,7 @@ const app = {
             singer: "Trọng Tấn",
             img: "./asset/img/ndx.jpg",
             audioPath: "./asset/audio/ndx.mp3",
-            isNew: false,
+            isNew: true,
             isLike: false,
         },
         {
@@ -106,7 +106,7 @@ const app = {
             singer: "Trình Đình Quang",
             img: "./asset/img/ldlg.jpg",
             audioPath: "./asset/audio/ldlg.mp3",
-            isNew: false,
+            isNew: true,
             isLike: true,
         },
         {
@@ -115,7 +115,7 @@ const app = {
             singer: "Min",
             img: "./asset/img/xlvnlh.jpg",
             audioPath: "./asset/audio/xlvnlh.mp3",
-            isNew: false,
+            isNew: true,
             isLike: false,
         },
     ],
@@ -130,10 +130,13 @@ const app = {
         const newsongs = this.songs.map((song) => {
             if (song.isNew) {
                 return `
-                    <div data-value="${song.id}" class="col l-2 song-container">
+                    <div data-value="${song.id}" class="song-container">
                         <div class="song-img" style="background-image: url('${song.img}');"></div>
                         <p class="song-name">${song.name}</p>
                         <p class="song-singer">${song.singer}</p>
+                        <div class="play-hov">
+                            <i class="play-hov-icon fa-solid fa-play"></i>
+                        </div>
                     </div>`;
             }
         });
@@ -143,10 +146,13 @@ const app = {
     renderListsSong: function () {
         const listsong = this.songs.map((song) => {
             return `
-                <div data-value="${song.id}" class="col l-2 song-container">
+                <div data-value="${song.id}" class="song-container">
                     <div class="song-img" style="background-image: url('${song.img}');"></div>
                     <p class="song-name">${song.name}</p>
                     <p class="song-singer">${song.singer}</p>
+                    <div class="play-hov">
+                        <i class="play-hov-icon fa-solid fa-play"></i>
+                    </div>
                 </div>`;
         });
         $(".list-song").innerHTML = listsong.join("");
@@ -156,10 +162,13 @@ const app = {
         const listLikeSong = this.songs.map((song) => {
             if (song.isLike) {
                 return `
-                <div data-value="${song.id}" class="col l-2 song-container">
+                <div data-value="${song.id}" class="song-container">
                     <div class="song-img" style="background-image: url('${song.img}');"></div>
                     <p class="song-name">${song.name}</p>
                     <p class="song-singer">${song.singer}</p>
+                    <div class="play-hov">
+                        <i class="play-hov-icon fa-solid fa-play"></i>
+                    </div>
                 </div>`;
             }
         });

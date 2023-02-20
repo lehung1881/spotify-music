@@ -1,0 +1,91 @@
+@media screen and (min-width: 1225px) {
+    .hiden-t{
+        display: none;
+    }
+}
+@media screen and (max-width: 1224px) {
+    :root{
+        --song-container-w: 21%;
+    }
+    .hiden-t{
+        display: none;
+    }
+}
+@media screen and (max-width: 1133px){
+    :root{
+        --song-play-h: 80px;
+        --font-1-6: 1.4rem;
+        --font-1-4: 1.2rem;
+        --font-1-8-i: 1rem;
+        --song-play__img-wh: 40px;
+        --song-play__img-bdr: 50%;
+        --song-container-w: 16.66667%;
+        --heading-2: 1.6rem;
+        --font-2-i: 1.4rem;
+    }
+    .hiden-t{
+        display: none;
+    }
+    .nav-list{
+        border-bottom: none;
+    }
+    .header,
+    .container{
+        margin-left: 72px;
+    }
+    .content-left{
+        display: none;
+    }
+    .content-left-m{
+        display: block;
+    }
+    .song-play-right{
+        display: none;
+    }
+    .song-play{
+        justify-content: space-around;
+    }
+    .song-play-left{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1030px) and (min-width: 740px){
+    :root{
+        --song-container-w: 23%;
+    }
+    .song-container{
+        margin: 10px 6px;
+    }
+    
+}
+@media screen and (max-width: 739px) {
+    :root{
+        --song-container-w: 46%;
+    }
+    .song-container{
+        margin: 10px 6px;
+    }
+    .song-play-left{
+        display: none;
+    }
+    .content-left-m{
+        display: none;
+    }
+    .header,
+    .container{
+        margin-left: 0;
+    } 
+    .hiden{
+        display: none;
+    }
+    .logo-icon{
+        margin-left: 25px;
+        color: #1ed760;
+    }
+    .header{
+        margin: 0;
+    }
+    .hiden-t{
+        display: block;
+    }
+}
