@@ -5,11 +5,13 @@
 }
 @media screen and (max-width: 1224px) {
     :root{
-        --song-container-w: 21%;
+        --col-items: 5;
+        --gap-items: 20px;
     }
     .hiden-t{
         display: none;
     }
+    
 }
 @media screen and (max-width: 1133px){
     :root{
@@ -19,9 +21,10 @@
         --font-1-8-i: 1rem;
         --song-play__img-wh: 40px;
         --song-play__img-bdr: 50%;
-        --song-container-w: 16.66667%;
         --heading-2: 1.6rem;
         --font-2-i: 1.4rem;
+        --col-items: 5;
+        --gap-items: 20px;
     }
     .hiden-t{
         display: none;
@@ -51,20 +54,24 @@
 }
 @media screen and (max-width: 1030px) and (min-width: 740px){
     :root{
-        --song-container-w: 23%;
+        --col-items: 4;
+        --gap-items: 20px;
     }
-    .song-container{
-        margin: 10px 6px;
+}
+@media screen and (max-width: 845px) {
+    :root{
+        --col-items: 3;
+        --gap-items: 16px;
+        --mg-left: 0;
     }
-    
 }
 @media screen and (max-width: 739px) {
     :root{
-        --song-container-w: 46%;
+        --col-items: 2;
+        --gap-items: 10px;
+        --mg-left: 0;
     }
-    .song-container{
-        margin: 10px 6px;
-    }
+    
     .song-play-left{
         display: none;
     }

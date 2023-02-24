@@ -14,6 +14,8 @@ const heart = $(".song-play-icon");
 const volumeMute = $(".control-play-right-volume");
 const progessVolume = $(".progress-2");
 const repeatBtn = $(".control-play-repeat");
+const searchBtn = $(".nav-list__item-search");
+const inputSearch = $(".header-search");
 
 const app = {
     currentIndex: 0,
@@ -195,7 +197,7 @@ const app = {
         this.loadCurrentSong();
     },
     randomSong: function () {
-        this.currentIndex = Math.floor(Math.random() * (this.songs.length - 1));
+        this.currentIndex = Math.floor(Math.random() * (this.songs.length));
         this.loadCurrentSong();
     },
     handleEvent: function () {
@@ -219,7 +221,6 @@ const app = {
                 volumeMute.classList.remove("volume--active");
                 progessVolume.value = myAudio.volume * 100;
                 myAudio.muted = false;
-                console.log(audio.volume);
             } else {
                 isMute = true;
                 volumeMute.classList.add("volume--active");
@@ -300,7 +301,6 @@ const app = {
         };
         // Phát bài hát khi chọn
         const listSong = document.querySelectorAll(".song-container");
-        // Now it's an Array.
         listSong.forEach(function (songElement) {
             songElement.onclick = function () {
                 const idx = Number(songElement.getAttribute("data-value"));
@@ -311,6 +311,18 @@ const app = {
                 myAudio.play();
             };
         });
+        // Hiển thị thanh tìm kiếm
+        var isSearch = false
+        console.log(searchBtn)
+        searchBtn.onclick = function(){
+            if (isSearch) {
+                isSearch = false;
+                inputSearch.classList.remove("header-search--active");
+            } else {
+                isSearch = true;
+                inputSearch.classList.add("header-search--active");
+            }
+        }
     },
     start: function () {
         this.defindProperties();
